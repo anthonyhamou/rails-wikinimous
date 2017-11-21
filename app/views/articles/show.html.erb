@@ -1,0 +1,13 @@
+<div class="container padded">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1><%=@article.title%></h1>
+      <p><%=@article.content%></p>
+      <%=image_tag "https://picsum.photos/200/400/?random"%>
+      <%= link_to article_path(@article), method: :delete do %>
+        <i class="fa fa-trash" aria-hidden="true"> Delete it !</i>
+      <% end %>
+    </div>
+    <%= link_to "Back to articles", articles_path %>
+  </div>
+</div>
